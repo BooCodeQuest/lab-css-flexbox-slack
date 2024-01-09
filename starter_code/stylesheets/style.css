@@ -1,10 +1,326 @@
-/*
-background purple: #540B51
-background ivory: #F3EAE2
-button blue: #4285F4
-titles black: #191817
-paragraph black: #000000
-paragraph yellow: #ECB12F
-links blue: #2E71A6
-footer links grey: #454245
-*/
+/* General styles, include these at the start of your CSS file */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Utility classes for Flexbox layout */
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #4A154B; /* Adjust the color as per your theme */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4a154b;
+  }
+  
+  nav img {
+    width: 30%;
+  }
+  
+  /* Hide the desktop navigation menu items */
+  nav ul {
+    display: none;
+  }
+  
+  /* Show menu button (hamburger icon) for mobile */
+  .menu-icon {
+    display: block;
+  }
+  
+  /* Main content styles */
+  main {
+    padding: 1rem;
+  }
+  
+  /* Section styles */
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #4a154b; /* Adjust the color as per your theme */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #4a154b; /* Adjust the color as per your theme */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Media query for mobile screens */
+ 
+  
+
+
+  @media (max-width: 768px) {
+    /* Adjust the navbar logo size */
+    nav img {
+      width: auto; /* adjust the size of the logo */
+      height: 32px; /* adjust the height of the logo */
+    }
+  
+    /* Adjust the search icon button */
+    .search-icon-button {
+      background: transparent;
+      border: none;
+      padding: 0;
+      width: 24px; /* adjust the width of the button */
+      height: 24px; /* adjust the height of the button */
+      margin-right: 16px; /* adjust the space to the right of the search icon */
+    }
+  
+    /* Adjust the menu icon button */
+    .menu-icon-button {
+      background: transparent;
+      border: none;
+      padding: 0;
+      width: 24px; /* adjust the width of the button */
+      height: 24px; /* adjust the height of the button */
+    }
+  
+    /* Adjust the header container */
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    /* Adjust the header title size and spacing */
+    header h1 {
+      font-size: 1.5rem; /* adjust the size of the header title for mobile */
+      margin-bottom: 8px; /* adjust the space below the title */
+    }
+  
+    /* Adjust the header subtitle size and spacing */
+    header p {
+      font-size: 1rem; /* adjust the size of the subtitle */
+      margin-bottom: 16px; /* adjust the space below the subtitle */
+    }
+  
+    /* Adjust the header buttons */
+    header .btn {
+      width: calc(100% - 32px); /* full width minus horizontal padding */
+      margin-bottom: 8px; /* adjust the space between buttons */
+    }
+  
+    /* Adjust the header Google sign-up button */
+    header .btn img {
+      margin-right: 8px; /* adjust the space between the Google logo and text */
+    }
+  
+    /* Adjust the main content layout */
+    main {
+      padding: 16px; /* adjust the padding around the main content */
+    }
+  
+    /* Adjust the section layout */
+    main section {
+      /* Ensure each section stacks on top of each other */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Adjust the main buttons */
+    main .btn {
+      width: calc(100% - 32px); /* full width minus horizontal padding */
+      margin: 8px 0; /* adjust the vertical margin around buttons */
+    }
+  
+    /* Adjust the footer layout */
+    footer {
+      padding: 16px; /* adjust the padding around the footer content */
+    }
+  
+    /* Adjust the footer links */
+    footer ul {
+      flex-direction: column; /* stack footer links vertically */
+      align-items: center; /* center align the footer links */
+      padding: 0; /* remove default padding */
+      list-style-type: none; /* remove list bullets */
+    }
+  
+    footer ul li {
+      margin-bottom: 8px; /* add space between footer links */
+    }
+  
+    /* Adjust the footer social icons */
+    footer ul:nth-child(2) {
+      flex-direction: row; /* lay out social icons horizontally */
+      justify-content: center; /* center the social icons */
+    }
+  
+    footer ul:nth-child(2) li {
+      margin: 0 4px; /* adjust horizontal spacing around social icons */
+    }
+  
+    /* Adjust the small print in the footer */
+    footer div small {
+      text-align: center; /* center the small print text */
+      display: block; /* make the small print its own block */
+      margin-top: 16px; /* add space above the small print */
+    }
+  }
+
+  @media (max-width: 768px) {
+  header {
+    background-color: #4A154B; /* Slack purple */
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem; /* Increase top and bottom padding, adjust side padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 2rem; /* Increase the font size for visibility */
+    margin-bottom: 1rem; /* Add some space below the heading */
+  }
+
+  header p {
+    margin-bottom: 1.5rem; /* Add space between the paragraph and buttons */
+    font-size: 1.25rem; /* Slightly larger font size for the paragraph */
+  }
+
+  .btn {
+    background-color: #ffffff; /* Use white background for buttons */
+    color: #4A154B; /* Slack purple text for contrast */
+    border: 1px solid #4A154B; /* Add border to match Slack's style */
+    padding: 1rem 2rem; /* Increase padding for a larger touch area */
+    margin: 0.5rem 0; /* Add some vertical space between buttons */
+    width: 80%; /* Use a percentage width for responsive sizing */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Optional: add shadow for depth */
+    border-radius: 4px; /* Rounded corners for the buttons */
+    font-weight: bold; /* Bold font weight for button text */
+    font-size: 1rem; /* Standard font size for the buttons */
+    display: flex; /* Use flexbox for aligning image and text */
+    justify-content: center; /* Center the content inside the button */
+    align-items: center; /* Align items vertically */
+  }
+
+  .btn img {
+    margin-right: 0.5rem; /* Add space between the Google logo and text */
+    width: 24px; /* Standard size for the logo inside the button */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Adjust the Google sign-up button */
+  .btn-google {
+    background-color: #4285F4; /* Google's brand color for the button */
+    color: white; /* White text for the Google button */
+  }
+
+
+
+header .btn {
+    width: 80%; /* Adjust width to match design */
+    padding: 15px; /* Increase padding for taller buttons */
+    margin: 10px 0; /* Add space between buttons */
+    border-radius: 4px; /* Rounded corners for the buttons */
+    border: 2px solid transparent; /* Default border to be overridden */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Specific styles for the 'Sign up with email' button */
+  header .btn-email {
+    background-color: #ffffff; /* White background */
+    color: #4A154B; /* Slack purple text */
+    border-color: #4A154B; /* Slack purple border */
+  }
+
+  /* Specific styles for the 'Sign up with Google' button */
+  header .btn-google {
+    background-color: #4285F4; /* Google blue background */
+    color: #ffffff; /* White text */
+  }
+
+  header .btn img {
+    margin-right: 10px; /* Space between the icon and the text */
+    width: 24px; /* Fixed width for the icon */
+  }
+
+
+  header {
+    background-color: #4A154B; /* Slack purple background */
+    padding: 2rem 1rem; /* Increase top and bottom padding */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem; /* Larger font size for the main title */
+    color: white; /* White color for the text */
+    margin-bottom: 1rem; /* Space below the title */
+}
+
+header p {
+    color: white; /* White color for the text */
+    margin-bottom: 2rem; /* Space below the paragraph */
+}
+
+/* Styles for the buttons */
+header .btn {
+    background-color: #ffffff; /* White background for the buttons */
+    color: #4A154B; /* Slack purple text */
+    border: 1px solid #4A154B; /* Border color to match Slack purple */
+    border-radius: 5px; /* Rounded corners for the buttons */
+    padding: 1rem 1.5rem; /* Padding inside the buttons */
+    font-weight: bold; /* Bold font for the text */
+    margin-bottom: 1rem; /* Space between the buttons */
+    width: auto; /* Auto width for content sizing */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+header .btn img {
+    margin-right: 10px; /* Space between the icon and the text */
+    width: 20px; /* Fixed width for the icon */
+    height: auto; /* Auto height to maintain aspect ratio */
+}
+
+  }
